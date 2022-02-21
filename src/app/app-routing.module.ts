@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import  {WelcomeComponent} from './welcome/welcome.component';
 import {TodosListComponent} from './todos-list/todos-list.component';
+import { LogoutComponent } from './logout/logout.component';
 const routes: Routes = [
   {
     path:'login',
@@ -13,12 +14,20 @@ const routes: Routes = [
     component:WelcomeComponent,
   },
   {
+    path:'welcome',
+    component:WelcomeComponent,
+  },
+  {
      path:'todos',
      component:TodosListComponent,
   },
   {
     path:'', 
     component:WelcomeComponent
+  },
+  {
+    path:'logout',
+    component:LogoutComponent,
   }
 ];
 
