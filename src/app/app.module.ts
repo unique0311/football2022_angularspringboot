@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { TodosListComponent } from './todos-list/todos-list.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { TodosListComponent } from './todos-list/todos-list.component';
     LoginComponent,
     WelcomeComponent,
     TodosListComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
