@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   password='';
   check = false;
   handleLogin():void{
-    // if(this.username== 'dhia' || this.password == 'spaz' ) 
+     if(this.username== 'dhia' || this.password == 'langour' ) 
      this.router.navigate(['/welcome',this.username]);
   }
 }
