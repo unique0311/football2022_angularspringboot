@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import  {WelcomeComponent} from './welcome/welcome.component';
+import {TodosListComponent} from './todos-list/todos-list.component';
 const routes: Routes = [
   {
     path:'login',
@@ -10,6 +11,10 @@ const routes: Routes = [
   {
     path:'welcome/:name',
     component:WelcomeComponent,
+  },
+  {
+     path:'todos',
+     component:TodosListComponent,
   },
   {
     path:'', 

@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { TodosListComponent } from './todos-list/todos-list.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     AppComponent,
     LoginComponent,
     WelcomeComponent,
+    TodosListComponent,
   ],
   imports: [
     BrowserModule,
