@@ -1,0 +1,26 @@
+<div class="container" > 
+    <table class="table">
+        <thead> 
+            <tr> 
+              
+                <th>Name</th>
+                <th>Content</th>
+                <th>QuartFinal</th>
+                <th>Semi final</th>
+                <th>Quart final</th>
+                <th>Number of cups</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let team of Teams"> 
+                <td>{{team.name}}</td>
+                <td>{{team.content}}</td>
+                <td>{{team.quartFinal}}</td>
+                <td>{{team.semiFinal}}</td>
+                <td>{{team.final}}</td>
+                <td>{{team.numbrCups}}</td>
+               
+            </tr>
+        </tbody>
+    </table>
+    </div>

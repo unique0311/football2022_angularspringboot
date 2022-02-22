@@ -5,6 +5,7 @@ import  {WelcomeComponent} from './welcome/welcome.component';
 import {TodosListComponent} from './todos-list/todos-list.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RouteGuardService } from './service/route-guard.service';
+import { TeamsComponent } from './teams/teams.component';
 const routes: Routes = [
   {
     path:'login',
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path:'logout',
     component:LogoutComponent,
+  }, 
+  {
+    path:'teams',
+    component:TeamsComponent,
   }
 ];
 
