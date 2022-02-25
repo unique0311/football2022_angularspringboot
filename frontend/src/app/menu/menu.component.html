@@ -3,7 +3,7 @@
        
         <ul class="navbar-nav">
             <li ><a  routerLink="/"     *ngIf="HardcodedAuthenticationService.isUserLoggedIn()" class="nav-link "> Home </a></li>
-            <li><a routerLink="/todos"  *ngIf="HardcodedAuthenticationService.isUserLoggedIn()" class="nav-link">   Todo </a> </li>
+            <li><a routerLink="/teams"  *ngIf="HardcodedAuthenticationService.isUserLoggedIn()" class="nav-link">   Teams </a> </li>
         </ul>
         <ul class="navbar-nav navbar-collapse justify-content-end ">
             <li><a routerLink="/login" *ngIf="!HardcodedAuthenticationService.isUserLoggedIn()" class="nav-link "> Login </a></li>

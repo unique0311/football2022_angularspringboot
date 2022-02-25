@@ -1,4 +1,4 @@
-package worldcup22.restfulwebservice;
+package worldcup22.restfulwebservice.Controllers;
 
 import org.springframework.web.bind.annotation.*;
 

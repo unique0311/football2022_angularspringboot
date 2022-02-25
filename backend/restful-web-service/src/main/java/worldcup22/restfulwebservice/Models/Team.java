@@ -1,19 +1,19 @@
-package worldcup22.restfulwebservice;
+package worldcup22.restfulwebservice.Models;
 
 public class Team {
   private String name;
   private String content;
-  private boolean SemiFinal;
+  private boolean semiFinal;
   private boolean quartFinal;
-  private boolean Final;
+  private boolean isFinal;
   private int numbrCups;
 
-  public Team(String name, String content, boolean semiFinal, boolean quartFinal, boolean aFinal, int numbrCups) {
+  public Team(String name, String content, boolean semiFinal, boolean quartFinal, boolean isFinal, int numbrCups) {
     this.name = name;
     this.content = content;
-    SemiFinal = semiFinal;
+    this.semiFinal = semiFinal;
     this.quartFinal = quartFinal;
-    Final = aFinal;
+    this.isFinal = isFinal;
     this.numbrCups = numbrCups;
   }
 
@@ -34,11 +34,11 @@ public class Team {
   }
 
   public boolean isSemiFinal() {
-    return SemiFinal;
+    return semiFinal;
   }
 
   public void setSemiFinal(boolean semiFinal) {
-    SemiFinal = semiFinal;
+    this.semiFinal = semiFinal;
   }
 
   public boolean isQuartFinal() {
@@ -50,11 +50,11 @@ public class Team {
   }
 
   public boolean isFinal() {
-    return Final;
+    return isFinal;
   }
 
   public void setFinal(boolean aFinal) {
-    Final = aFinal;
+    isFinal = aFinal;
   }
 
   public int getNumbrCups() {

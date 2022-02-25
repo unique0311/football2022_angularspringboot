@@ -1,6 +1,13 @@
-package worldcup22.restfulwebservice;
+package worldcup22.restfulwebservice.Models;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import javax.persistence.Id;
+
+@Document("Player")
 public class Player {
+  @Id
+  private String id;
   private String fullName;
   private String position;
   private int Number;
