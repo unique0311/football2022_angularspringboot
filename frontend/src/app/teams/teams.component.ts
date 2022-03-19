@@ -34,7 +34,6 @@ export class TeamsComponent implements OnInit {
    )
   }
   getResp(res:any){
-    
     this.Teams=res;
     console.log(this.Teams)
   }

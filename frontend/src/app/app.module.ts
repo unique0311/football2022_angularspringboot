@@ -11,6 +11,8 @@ import { LogoutComponent } from './logout/logout.component';
 import { AngularEmojisModule } from 'angular-emojis';
 import { TeamsComponent } from './teams/teams.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TeamFormComponent } from './team-form/team-form.component';
+import { PlayersComponent } from './players/players.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     MenuComponent,
     LogoutComponent,
     TeamsComponent,
+    TeamFormComponent,
+    PlayersComponent,
   ],
   imports: [
     BrowserModule,

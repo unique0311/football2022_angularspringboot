@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 export class Teams{
   constructor(
     public name:string,
@@ -8,7 +9,6 @@ export class Teams{
     public quartFinal:boolean,
     public Final:boolean,
     public numbrCups:number,
-    
     ){}
 }
 
@@ -16,9 +16,7 @@ export class Teams{
   providedIn: 'root'
 })
 
-
 export class TeamServiceService {
-  
   constructor(
     private http: HttpClient
   ) { }
@@ -27,5 +25,17 @@ export class TeamServiceService {
   }
   handleGetResponse(response: any){
     console.log(response.name)
+  }
+   
+  handleAddTeam(data:any){
+    let url = "http://localhost:8080/team"
+    try {
+      return this.http.post(url,data).subscribe();
+   }
+   catch (e) {
+      return null;
+   }
+
+  
   }
 }

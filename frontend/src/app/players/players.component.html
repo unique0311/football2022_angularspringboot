@@ -1,0 +1,33 @@
+<div class="container" > 
+    <table class="table">
+        <thead> 
+            <tr> 
+                <th></th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Goals</th>
+                <th>Number</th>
+                <th>Age</th>
+                
+                
+             
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let player of Players"> 
+                <td><img width="70px" height="100px" src="{{'data:image/jpg;base64,' + player.pic}}" /></td>
+                <td>{{player.fullName}}</td>
+                <td>{{player.position}}</td>
+                <td>{{player.numberGoals}}</td>
+                <td>{{player.number}}</td>
+                <td>{{player.age}}</td>
+                
+                
+               
+                <td><button class="btn btn-primary"> Update</button> </td>
+                <td><button class="btn btn-danger"> Delete</button> </td>
+               
+            </tr>
+        </tbody>
+    </table>
+    </div>

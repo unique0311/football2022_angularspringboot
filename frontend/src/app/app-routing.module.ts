@@ -6,6 +6,8 @@ import {TodosListComponent} from './todos-list/todos-list.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RouteGuardService } from './service/route-guard.service';
 import { TeamsComponent } from './teams/teams.component';
+import { TeamFormComponent } from './team-form/team-form.component';
+import { PlayersComponent } from './players/players.component';
 const routes: Routes = [
   {
     path:'login',
@@ -38,6 +40,17 @@ const routes: Routes = [
   {
     path:'teams',
     component:TeamsComponent,
+    canActivate:[RouteGuardService]
+  }, 
+  {
+    path:'addteam',
+    component:TeamFormComponent,
+    canActivate:[RouteGuardService]
+  }, 
+  {
+    path:'players',
+    component:PlayersComponent,
+    canActivate:[RouteGuardService]
   }
 ];
 

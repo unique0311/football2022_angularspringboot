@@ -10,11 +10,9 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class TeamController {
-  private final PlayerRepository playerRepositoryy;
   private final TeamRepository teamRepository;
 
-  public TeamController(PlayerRepository playerRepositoryy, TeamRepository teamRepository) {
-    this.playerRepositoryy = playerRepositoryy;
+  public TeamController( TeamRepository teamRepository) {
     this.teamRepository = teamRepository;
   }
 

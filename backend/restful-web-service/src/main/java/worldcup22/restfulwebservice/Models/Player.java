@@ -6,24 +6,32 @@ import javax.persistence.Id;
 
 @Document("Player")
 public class Player {
-  @Id
-  private String id;
+  private String pic;
   private String fullName;
   private String position;
-  private int Number;
-  private int Age;
+  private int number;
+  private int age;
   private int numberGoals;
   private int numberYellowCards;
   private int getNumberRedCards;
 
-  public Player(String fullName, String position, int number, int age, int numberGoals, int numberYellowCards, int getNumberRedCards) {
+  public Player(String pic, String fullName, String position, int number, int age, int numberGoals, int numberYellowCards, int getNumberRedCards) {
+    this.pic = pic;
     this.fullName = fullName;
     this.position = position;
-    Number = number;
-    Age = age;
+    this.number = number;
+    this.age = age;
     this.numberGoals = numberGoals;
     this.numberYellowCards = numberYellowCards;
     this.getNumberRedCards = getNumberRedCards;
+  }
+
+  public String getPic() {
+    return pic;
+  }
+
+  public void setPic(String pic) {
+    this.pic = pic;
   }
 
   public String getFullName() {
@@ -43,19 +51,19 @@ public class Player {
   }
 
   public int getNumber() {
-    return Number;
+    return number;
   }
 
   public void setNumber(int number) {
-    Number = number;
+    this.number = number;
   }
 
   public int getAge() {
-    return Age;
+    return age;
   }
 
   public void setAge(int age) {
-    Age = age;
+    this.age = age;
   }
 
   public int getNumberGoals() {

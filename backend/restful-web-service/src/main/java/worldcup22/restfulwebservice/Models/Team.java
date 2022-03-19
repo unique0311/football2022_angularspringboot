@@ -1,6 +1,7 @@
 package worldcup22.restfulwebservice.Models;
 
 public class Team {
+  //private String flag;
   private String name;
   private String content;
   private boolean semiFinal;
@@ -9,6 +10,7 @@ public class Team {
   private int numbrCups;
 
   public Team(String name, String content, boolean semiFinal, boolean quartFinal, boolean isFinal, int numbrCups) {
+    //this.flag = flag;
     this.name = name;
     this.content = content;
     this.semiFinal = semiFinal;
@@ -16,6 +18,7 @@ public class Team {
     this.isFinal = isFinal;
     this.numbrCups = numbrCups;
   }
+
 
   public String getName() {
     return name;

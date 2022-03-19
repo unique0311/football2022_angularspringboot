@@ -1,0 +1,11 @@
+<form #frm="ngForm" (ngSubmit)="HandleAddTeam(frm.value)">
+    <div class="form-group container">
+        Team name <input class="form-control" type="text" name="name" ngModel/> 
+        Number of cupps <input  class="form-control" type="number"  name="numbrCups" ngModel/> 
+        Content <input  class="form-control"type="text" name="content" ngModel/> 
+        Semi final <input class="form-control" type="text" name="content" name="semiFinal" ngModel />
+        Quart Final <input class="form-control" type="text" name="content" name="quartFinal" ngModel/> 
+        Final  <input class="form-control" type="text"  name="isFinal" ngModel/> 
+        <input type="submit"  class="btn btn-primary">
+    </div>
+</form>
