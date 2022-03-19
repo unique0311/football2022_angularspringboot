@@ -1,6 +1,13 @@
 package worldcup22.restfulwebservice.Models;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class Team {
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private String id;
   //private String flag;
   private String name;
   private String content;
@@ -9,8 +16,9 @@ public class Team {
   private boolean isFinal;
   private int numbrCups;
 
-  public Team(String name, String content, boolean semiFinal, boolean quartFinal, boolean isFinal, int numbrCups) {
+  public Team(String id,String name, String content, boolean semiFinal, boolean quartFinal, boolean isFinal, int numbrCups) {
     //this.flag = flag;
+    this.id = id;
     this.name = name;
     this.content = content;
     this.semiFinal = semiFinal;
@@ -26,6 +34,14 @@ public class Team {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
   }
 
   public String getContent() {

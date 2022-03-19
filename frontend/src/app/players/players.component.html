@@ -23,9 +23,10 @@
                 <td>{{player.age}}</td>
                 
                 
+                
                
-                <td><button class="btn btn-primary"> Update</button> </td>
-                <td><button class="btn btn-danger"> Delete</button> </td>
+                <td><button class="btn btn-primary" > Update</button> </td>
+                <td><button class="btn btn-danger" (click)="delete(player.id)"> Delete</button> </td>
                
             </tr>
         </tbody>

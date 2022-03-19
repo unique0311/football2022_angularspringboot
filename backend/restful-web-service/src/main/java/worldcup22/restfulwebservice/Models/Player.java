@@ -2,10 +2,15 @@ package worldcup22.restfulwebservice.Models;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Document("Player")
 public class Player {
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private String id;
   private String pic;
   private String fullName;
   private String position;
@@ -15,7 +20,8 @@ public class Player {
   private int numberYellowCards;
   private int getNumberRedCards;
 
-  public Player(String pic, String fullName, String position, int number, int age, int numberGoals, int numberYellowCards, int getNumberRedCards) {
+  public Player(String id, String pic, String fullName, String position, int number, int age, int numberGoals, int numberYellowCards, int getNumberRedCards) {
+    this.id = id;
     this.pic = pic;
     this.fullName = fullName;
     this.position = position;
@@ -28,6 +34,14 @@ public class Player {
 
   public String getPic() {
     return pic;
+  }
+
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
   }
 
   public void setPic(String pic) {

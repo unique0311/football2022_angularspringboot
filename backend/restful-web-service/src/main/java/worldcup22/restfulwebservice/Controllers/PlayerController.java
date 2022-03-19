@@ -1,5 +1,6 @@
 package worldcup22.restfulwebservice.Controllers;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import worldcup22.restfulwebservice.Models.Player;
@@ -22,5 +23,9 @@ public class PlayerController {
   @PostMapping("/player")
   public ResponseEntity<Player> createPlayer(@RequestBody Player player){
     return ResponseEntity.ok(this.playerRepository.save(player));
+  }
+  @DeleteMapping("/player/delete/{id}")
+  public void deletePlayer(@PathVariable("id") String id){
+    playerRepository.deleteById(id);
   }
 }

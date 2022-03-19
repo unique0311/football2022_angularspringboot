@@ -8,6 +8,7 @@ import {PlayerService} from '../service/data/player.service'
 export class PlayersComponent implements OnInit {
 Players = [
   {
+    "id":null,
     "pic":"",
     "fullName": "Cristiano Ronaldo",
     "position": "ST",
@@ -31,5 +32,8 @@ Players = [
   getResp(res:any){
     this.Players=res;
     console.log(this.Players)
+  }
+  delete(id:any){
+    this.PlayerService.deletePlayer(id).subscribe(() => console.log("player deleted"))
   }
 }

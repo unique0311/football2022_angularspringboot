@@ -13,6 +13,7 @@ import { TeamsComponent } from './teams/teams.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TeamFormComponent } from './team-form/team-form.component';
 import { PlayersComponent } from './players/players.component';
+import { PlayerFormComponent } from './player-form/player-form.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { PlayersComponent } from './players/players.component';
     TeamsComponent,
     TeamFormComponent,
     PlayersComponent,
+    PlayerFormComponent,
   ],
   imports: [
     BrowserModule,
