@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TeamServiceService } from '../service/data/team-service.service';
+import { HardcodedAuthenticationService } from '../service/hardcoded-authentication.service';
+
 
 @Component({
   selector: 'app-teams',
@@ -7,23 +9,17 @@ import { TeamServiceService } from '../service/data/team-service.service';
   styleUrls: ['./teams.component.css']
 })
 export class TeamsComponent implements OnInit {
- Teams = [{
-  "name": "Brazil",
-  "content": "Africa",
-  "quartFinal": false,
-  "numbrCups": 7,
-  "final": false,
-  "semiFinal": false
-}]
-
+ Teams:any;
+ id=''
  name='';
  content = '';
  SemiFinal=false;
  quartFinal=false;
  Final = false;
  numbrCups = 0;
+ flag = "";
  
-  constructor(private TeamsService: TeamServiceService) { }
+  constructor(private TeamsService: TeamServiceService,public HardcodedAuthenticationService:HardcodedAuthenticationService) { }
   
   ngOnInit(): void {
     this.getTeam()
@@ -36,5 +32,9 @@ export class TeamsComponent implements OnInit {
   getResp(res:any){
     this.Teams=res;
     console.log(this.Teams)
+  }
+  delete(id:any){
+    this.TeamsService.deleteTeam(id).subscribe(() => console.log("Team deleted"))
+    window.location.reload();
   }
 }

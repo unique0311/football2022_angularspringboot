@@ -2,7 +2,7 @@
     <table class="table">
         <thead> 
             <tr> 
-              
+                <th>Flag</th>
                 <th>Name</th>
                 <th>Content</th>
                 <th>QuartFinal</th>
@@ -13,14 +13,16 @@
         </thead>
         <tbody>
             <tr *ngFor="let team of Teams"> 
+                <td> <img width="80px" height="50px" src={{team.flag}}></td>
                 <td>{{team.name}}</td>
                 <td>{{team.content}}</td>
                 <td>{{team.quartFinal}}</td>
                 <td>{{team.semiFinal}}</td>
                 <td>{{team.final}}</td>
                 <td>{{team.numbrCups}}</td>
-                <td><button class="btn btn-primary"> Update</button> </td>
-                <td><button class="btn btn-danger"> Delete</button> </td>
+
+                <td *ngIf="HardcodedAuthenticationService.isUserAdmin()"><button class="btn btn-primary" > Update</button> </td>
+                <td *ngIf="HardcodedAuthenticationService.isUserAdmin()"><button class="btn btn-danger" (click)="delete(team.id)"> Delete</button> </td>
                
             </tr>
         </tbody>

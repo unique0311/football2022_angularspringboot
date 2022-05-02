@@ -2,6 +2,7 @@
   "name": "todo",
   "version": "0.0.0",
   "scripts": {
+    "serve":"npm start",
     "ng": "ng",
     "start": "node server.js",
     "build": "ng build",

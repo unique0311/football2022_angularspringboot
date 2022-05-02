@@ -5,10 +5,13 @@ import  {WelcomeComponent} from './welcome/welcome.component';
 import {TodosListComponent} from './todos-list/todos-list.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RouteGuardService } from './service/route-guard.service';
+import { RouteGuardAdminService } from './service/route-guard-admin.service';
 import { TeamsComponent } from './teams/teams.component';
 import { TeamFormComponent } from './team-form/team-form.component';
 import { PlayersComponent } from './players/players.component';
 import { PlayerFormComponent } from './player-form/player-form.component';
+import { MatchesComponent } from './matches/matches.component';
+import { MatchFormComponent } from './match-form/match-form.component';
 const routes: Routes = [
   {
     path:'login',
@@ -44,9 +47,14 @@ const routes: Routes = [
     canActivate:[RouteGuardService]
   }, 
   {
+    path:'matches',
+    component:MatchesComponent,
+    canActivate:[RouteGuardService] 
+  },
+  {
     path:'addteam',
     component:TeamFormComponent,
-    canActivate:[RouteGuardService]
+    canActivate:[RouteGuardAdminService ]
   }, 
   {
     path:'players',
@@ -56,7 +64,12 @@ const routes: Routes = [
   {
     path:'addplayer',
     component:PlayerFormComponent,
-    canActivate:[RouteGuardService]
+    canActivate:[RouteGuardAdminService ]
+  }, 
+  {
+    path:'addmatch',
+    component:MatchFormComponent,
+    canActivate:[RouteGuardAdminService]
   }
 ];
 

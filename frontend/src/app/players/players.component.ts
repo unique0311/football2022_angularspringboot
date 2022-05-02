@@ -1,25 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import {PlayerService} from '../service/data/player.service'
+import { Router } from '@angular/router';
+import { HardcodedAuthenticationService } from '../service/hardcoded-authentication.service';
+
+
 @Component({
   selector: 'app-players',
   templateUrl: './players.component.html',
   styleUrls: ['./players.component.css']
 })
 export class PlayersComponent implements OnInit {
-Players = [
-  {
-    "id":null,
-    "pic":"",
-    "fullName": "Cristiano Ronaldo",
-    "position": "ST",
-    "number": 7,
-    "age": 36,
-     "numberGoals": 5,
-    "numberYellowCards": 2,
-    "getNumberRedCards": 0
-}
-]
-  constructor(private PlayerService: PlayerService) { }
+Players:any;
+  constructor(private PlayerService: PlayerService, private router:Router,public HardcodedAuthenticationService:HardcodedAuthenticationService) { }
 
   ngOnInit(): void {
     this.getPlayer()
@@ -35,5 +27,6 @@ Players = [
   }
   delete(id:any){
     this.PlayerService.deletePlayer(id).subscribe(() => console.log("player deleted"))
+    window.location.reload();
   }
 }

@@ -1,10 +1,10 @@
 <small *ngIf ='check'> Wrong credintials </small>
 <div class="container">
     <div class="alert alert-warning" *ngIf="!LoggedIn">You need to login</div> 
-    <form>
+    <form #frm="ngForm" (ngSubmit)="handleLogin(frm.value)">
         Username <input type="text" name = "username" [(ngModel)] = "username" > 
         Password <input type="password" name = "password" [(ngModel)] = "password" >
-        <button (click)=handleLogin() class="btn btn-success"> Login </button>
+        <button  class="btn btn-success"> Login </button>
     </form>
 </div>
 

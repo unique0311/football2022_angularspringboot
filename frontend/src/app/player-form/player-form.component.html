@@ -1,12 +1,14 @@
 <form #frm="ngForm" (ngSubmit)="HandleAddPlayer(frm.value)">
     <div class="form-group container">
         Full name<input class="form-control" type="text" name="fullName" ngModel/> 
-        Position <input  class="form-control" type="number"  name="position" ngModel/> 
-        Number <input  class="form-control"type="text" name="number" ngModel/> 
-        Age <input class="form-control" type="text"  name="age" ngModel />
-        Number of goals <input class="form-control" type="text"  name="numberGoals" ngModel/> 
-        Yellow cards  <input class="form-control" type="text"  name="numberYellowCards" ngModel/> 
-        Red cards<input class="form-control" type="text"  name="getNumberRedCards" ngModel/> 
+        Position <input  class="form-control" type="text"  name="position" ngModel/> 
+        Number <input  class="form-control"type="number" name="number" ngModel/> 
+        Age <input class="form-control" type="number"  name="age" ngModel />
+        Number of goals <input class="form-control" type="number"  name="numberGoals" ngModel/> 
+        Yellow cards  <input class="form-control" type="number"  name="numberYellowCards" ngModel/> 
+        Red cards<input class="form-control" type="number"  name="getNumberRedCards" ngModel/> 
+        Picture <input type='file' (change)="readUrl($event)">
+        <img [src]="url" height="300px" width="250px" *ngIf="url"> <br>
         <input type="submit"  class="btn btn-primary">
     </div>
 </form>

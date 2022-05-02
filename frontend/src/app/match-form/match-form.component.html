@@ -1,0 +1,15 @@
+<form #frm="ngForm" (ngSubmit)="HandleAddMatch(frm.value)">
+    <div class="form-group container">
+      
+        Team 1
+        <select name="team1" ngModel (change)="test()">    
+            Team1<option *ngFor="let team of Teams" value={{team.id}} > {{team.name}} </option>
+        </select> <br>
+        Team2
+        <select name="team2" ngModel (change)="test()" >    
+            Team2<option *ngFor="let team of Teams" value={{team.id}} > <div *ngIf="team.name != team1">{{team.name}}</div> </option>
+        </select> <br>
+        Date<input class="form-control" type="date" name="date" ngModel/> 
+        <input type="submit"  class="btn btn-primary">
+    </div>
+</form>

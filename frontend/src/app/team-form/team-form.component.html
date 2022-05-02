@@ -2,11 +2,13 @@
     <div class="form-group container">
         Team name <input class="form-control" type="text" name="name" ngModel/> 
         Number of cupps <input  class="form-control" type="number"  name="numbrCups" ngModel/> 
-        Content <input  class="form-control"type="text" name="content" ngModel/> 
-        Semi final <input class="form-control" type="text" name="content" name="semiFinal" ngModel />
-        Quart Final <input class="form-control" type="text" name="content" name="quartFinal" ngModel/> 
-        Final  <input class="form-control" type="text"  name="isFinal" ngModel/> 
-        Flag <input class="form-control file-input" type="file"/> 
+        Content <input  class="form-control"  name="content" ngModel/> 
+        Semi final <input  type="checkbox"  class="form-check-label" name="semiFinal" ngModel /><br>
+        Quart Final <input type="checkbox" class="form-check-label" name="quartFinal" ngModel/> <br>
+        Final  <input type="checkbox" class="form-check-label"   name="isFinal" ngModel/> <br>
+        Flag 
+        <input type='file' (change)="readUrl($event)">
+        <img [src]="url" height="100px" width="200px" *ngIf="url"> <br>
         <input type="submit"  class="btn btn-primary">
     </div>
 </form>

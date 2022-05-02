@@ -2,11 +2,13 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
        
         <ul class="navbar-nav">
-            <li ><a  routerLink="/"     *ngIf="HardcodedAuthenticationService.isUserLoggedIn()" class="nav-link "> Home </a></li>
-            <li><a routerLink="/addteam"  *ngIf="HardcodedAuthenticationService.isUserLoggedIn()" class="nav-link">   Add team </a> </li>
+            <li ><a  routerLink="/"     *ngIf="HardcodedAuthenticationService.isUserLoggedIn() " class="nav-link "> Home </a></li>
+            <li><a routerLink="/addteam"  *ngIf="HardcodedAuthenticationService.isUserAdmin()"  class="nav-link">   Add team </a> </li>
             <li><a routerLink="/teams"  *ngIf="HardcodedAuthenticationService.isUserLoggedIn()" class="nav-link">   Teams </a> </li>
-            <li><a routerLink="/addplayer"  *ngIf="HardcodedAuthenticationService.isUserLoggedIn()" class="nav-link">   Add player </a> </li>
+            <li><a routerLink="/addplayer"  *ngIf="HardcodedAuthenticationService.isUserAdmin()" class="nav-link">   Add player </a> </li>
             <li><a routerLink="/players"  *ngIf="HardcodedAuthenticationService.isUserLoggedIn()" class="nav-link">   Players </a> </li>
+            <li><a routerLink="/addmatch"  *ngIf="HardcodedAuthenticationService.isUserAdmin()" class="nav-link">   Add match </a> </li>
+            <li><a routerLink="/matches"  *ngIf="HardcodedAuthenticationService.isUserLoggedIn()" class="nav-link">   Matches </a> </li>
         </ul>
         <ul class="navbar-nav navbar-collapse justify-content-end ">
             <li><a routerLink="/login" *ngIf="!HardcodedAuthenticationService.isUserLoggedIn()" class="nav-link "> Login </a></li>

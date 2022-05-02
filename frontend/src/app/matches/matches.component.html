@@ -1,0 +1,29 @@
+<div class="container" > 
+    
+    <table class="table">
+        <thead> 
+            <tr> 
+                <th>   </th>
+                <th>Team1</th>
+                <th>  </th>
+                <th>Team2</th>
+                
+                <th>  </th>
+                <th>Date</th>
+            
+                
+             
+            </tr>
+        </thead>
+        <tbody *ngIf="matches[0]"  >
+            <tr *ngFor="let match of matches "   > 
+                <td><img  width="80px" height="50px" src="{{match.team1.flag}}"/></td>
+                <td>{{match.team1.name}}</td>
+                <td>VS</td>
+                <td>{{match.team2.name}}</td>
+                <td><img  width="80px" height="50px" src="{{match.team2.flag}}"/></td>
+                <td>{{match.date}}</td>        
+            </tr>
+        </tbody>
+    </table>
+ </div>
