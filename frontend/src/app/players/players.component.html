@@ -1,21 +1,25 @@
 <div class="container" > 
+    <br>
+    <div> <input  class="form-control mr-sm-2" type="text" placeholder="Search" [(ngModel)]="fltr" ></div>
     <table class="table">
         <thead> 
             <tr> 
-                <th>   </th>
+                <th> </th>
                 <th>Name</th>
                 <th>Position</th>
                 <th>Goals</th>
                 <th>Number</th>
                 <th>Age</th>
                 <th>Country</th>
-                
+               <th></th>
+               <th></th>
+           
                 
              
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let player of Players"> 
+            <tr *ngFor="let player of Players | filter:fltr "> 
                 <td><img width="50px" heigth="100px" src="{{player.pic}}"></td>
                 <td>{{player.fullName}}</td>
                 <td>{{player.position}}</td>

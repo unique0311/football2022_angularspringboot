@@ -10,9 +10,9 @@ import { HardcodedAuthenticationService } from '../service/hardcoded-authenticat
   styleUrls: ['./players.component.css']
 })
 export class PlayersComponent implements OnInit {
-Players:any;
+  Players:any;
   constructor(private PlayerService: PlayerService, private router:Router,public HardcodedAuthenticationService:HardcodedAuthenticationService) { }
-
+  fltr:any;
   ngOnInit(): void {
     this.getPlayer()
   }
@@ -28,5 +28,10 @@ Players:any;
   delete(id:any){
     this.PlayerService.deletePlayer(id).subscribe(() => console.log("player deleted"))
     window.location.reload();
+  }
+  
+  handleSearch(val:any){
+    this.fltr = val.value;
+   
   }
 }

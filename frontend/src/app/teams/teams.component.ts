@@ -9,16 +9,10 @@ import { HardcodedAuthenticationService } from '../service/hardcoded-authenticat
   styleUrls: ['./teams.component.css']
 })
 export class TeamsComponent implements OnInit {
- Teams:any;
- id=''
- name='';
- content = '';
- SemiFinal=false;
- quartFinal=false;
- Final = false;
- numbrCups = 0;
- flag = "";
- 
+Teams:any;
+team:any;
+fltr=""
+key="name"
   constructor(private TeamsService: TeamServiceService,public HardcodedAuthenticationService:HardcodedAuthenticationService) { }
   
   ngOnInit(): void {
@@ -30,8 +24,17 @@ export class TeamsComponent implements OnInit {
    )
   }
   getResp(res:any){
-    this.Teams=res;
+    this.Teams=res.sort(this.compare);
     console.log(this.Teams)
+  }
+     compare( a:any, b:any ) {
+    if ( a.last_nom < b.last_nom ){
+      return -1;
+    }
+    if ( a.last_nom > b.last_nom ){
+      return 1;
+    }
+    return 0;
   }
   delete(id:any){
     this.TeamsService.deleteTeam(id).subscribe(() => console.log("Team deleted"))

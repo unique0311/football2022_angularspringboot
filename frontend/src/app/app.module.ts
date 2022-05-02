@@ -17,6 +17,8 @@ import { PlayerFormComponent } from './player-form/player-form.component';
 import { MatchesComponent } from './matches/matches.component';
 import { MatchFormComponent } from './match-form/match-form.component';
 import { RegisterComponent } from './register/register.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { RegisterComponent } from './register/register.component';
     FormsModule,
     AngularEmojisModule,
     HttpClientModule,
+    Ng2SearchPipeModule,
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

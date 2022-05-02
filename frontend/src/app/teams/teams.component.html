@@ -1,4 +1,6 @@
 <div class="container" > 
+    <br>
+    <div> <input  class="form-control mr-sm-2" type="text" placeholder="Search" [(ngModel)]="fltr" ></div>
     <table class="table">
         <thead> 
             <tr> 
@@ -9,10 +11,12 @@
                 <th>Semi final</th>
                 <th>Quart final</th>
                 <th>Number of cups</th>
+        
+                
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let team of Teams"> 
+            <tr *ngFor="let team of Teams | filter:fltr |orderBy:key "> 
                 <td> <img width="80px" height="50px" src={{team.flag}}></td>
                 <td>{{team.name}}</td>
                 <td>{{team.content}}</td>
