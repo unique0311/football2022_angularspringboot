@@ -7,6 +7,10 @@
         Number of goals <input class="form-control" type="number"  name="numberGoals" ngModel/> 
         Yellow cards  <input class="form-control" type="number"  name="numberYellowCards" ngModel/> 
         Red cards<input class="form-control" type="number"  name="getNumberRedCards" ngModel/> 
+        Nationality
+        <select name="nationality" ngModel (change)="onChange($event.target)" >    
+            Team1<option *ngFor="let team of Teams" value={{team.id}} > {{team.name}} </option>
+        </select> <br>
         Picture <input type='file' (change)="readUrl($event)">
         <img [src]="url" height="300px" width="250px" *ngIf="url"> <br>
         <input type="submit"  class="btn btn-primary">

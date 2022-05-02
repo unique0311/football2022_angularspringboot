@@ -16,6 +16,7 @@ import { PlayersComponent } from './players/players.component';
 import { PlayerFormComponent } from './player-form/player-form.component';
 import { MatchesComponent } from './matches/matches.component';
 import { MatchFormComponent } from './match-form/match-form.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { MatchFormComponent } from './match-form/match-form.component';
     PlayerFormComponent,
     MatchesComponent,
     MatchFormComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

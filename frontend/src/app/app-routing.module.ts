@@ -12,6 +12,7 @@ import { PlayersComponent } from './players/players.component';
 import { PlayerFormComponent } from './player-form/player-form.component';
 import { MatchesComponent } from './matches/matches.component';
 import { MatchFormComponent } from './match-form/match-form.component';
+import {RegisterComponent} from './register/register.component';
 const routes: Routes = [
   {
     path:'login',
@@ -70,7 +71,12 @@ const routes: Routes = [
     path:'addmatch',
     component:MatchFormComponent,
     canActivate:[RouteGuardAdminService]
+  },
+  {
+    path:'signup',
+    component:RegisterComponent,
   }
+ 
 ];
 
 @NgModule({

@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
            
           }
       );
-  
+
    }
    catch (e) {
       return null;

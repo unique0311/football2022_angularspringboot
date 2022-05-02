@@ -11,6 +11,7 @@ export class Players{
     private numberGoals:number,
     private numberYellowCards: number,
     private getNumberRedCards:number,
+    private nationality:any,
   ) { }
 }
 @Injectable({

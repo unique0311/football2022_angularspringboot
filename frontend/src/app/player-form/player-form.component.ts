@@ -1,20 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import {PlayerService} from '../service/data/player.service';
 import { Router } from '@angular/router';
+import { TeamServiceService } from '../service/data/team-service.service';
 @Component({
   selector: 'app-player-form',
   templateUrl: './player-form.component.html',
   styleUrls: ['./player-form.component.css']
 })
 export class PlayerFormComponent implements OnInit {
+  nt = {
+    id:1
+  }
+  nationality : any;
   url:any;
-  constructor(private playerService: PlayerService,private router:Router) { }
+  Teams:any;
+  constructor(private playerService: PlayerService,private router:Router,private TeamsService:TeamServiceService) { }
 
   ngOnInit(): void {
+    this.getTeam();
   }
   HandleAddPlayer(val:any){
+    val.nationality = this.nt;
     val.pic = this.url;
+
+    console.log("object ==>",val)
     this.playerService.handleAddPlayer(val);
+    console.log("lenaaa=>",val,"  nation ==>",this.nationality)
     this.router.navigate(['/players']); 
     
   }
@@ -28,5 +39,19 @@ export class PlayerFormComponent implements OnInit {
       reader.readAsDataURL(event.target.files[0]);
       console.log(this.url)
     }
+  }
+
+  getTeam(){
+    this.TeamsService.teamService().subscribe(
+      response => this.getResp(response)
+    )
+   }
+   getResp(res:any){
+    this.Teams=res;
+    console.log(this.Teams)
+  }
+  onChange(deviceValue:any) {
+    console.log(deviceValue.value);
+    this.nt.id = deviceValue.value;
   }
 }
