@@ -11,6 +11,7 @@ import { HardcodedAuthenticationService } from '../service/hardcoded-authenticat
 })
 export class PlayersComponent implements OnInit {
   Players:any;
+  key="";
   constructor(private PlayerService: PlayerService, private router:Router,public HardcodedAuthenticationService:HardcodedAuthenticationService) { }
   fltr:any;
   ngOnInit(): void {

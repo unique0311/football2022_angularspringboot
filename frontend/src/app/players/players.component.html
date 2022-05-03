@@ -4,7 +4,15 @@
     <table class="table">
         <thead> 
             <tr> 
-                <th> </th>
+                <th>
+                    Sort by 
+                <select [(ngModel)]="key"> 
+                    <option value="fullName">Name</option>   
+                    <option value="numberGoals">Goals</option> 
+                    <option value="age">Age</option> 
+                    <option value="position">Position</option> 
+
+                </select> </th>
                 <th>Name</th>
                 <th>Position</th>
                 <th>Goals</th>
@@ -19,7 +27,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let player of Players | filter:fltr "> 
+            <tr *ngFor="let player of Players | filter:fltr |orderBy:key:true "> 
                 <td><img width="50px" heigth="100px" src="{{player.pic}}"></td>
                 <td>{{player.fullName}}</td>
                 <td>{{player.position}}</td>
