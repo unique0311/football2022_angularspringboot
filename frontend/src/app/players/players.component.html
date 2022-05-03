@@ -6,7 +6,7 @@
             <tr> 
                 <th>
                     Sort by 
-                <select [(ngModel)]="key"> 
+                <select  [(ngModel)]="key"> 
                     <option value="fullName">Name</option>   
                     <option value="numberGoals">Goals</option> 
                     <option value="age">Age</option> 
@@ -26,23 +26,42 @@
              
             </tr>
         </thead>
-        <tbody>
-            <tr *ngFor="let player of Players | filter:fltr |orderBy:key:true "> 
-                <td><img width="50px" heigth="100px" src="{{player.pic}}"></td>
-                <td>{{player.fullName}}</td>
-                <td>{{player.position}}</td>
-                <td>{{player.numberGoals}}</td>
-                <td>{{player.number}}</td>
-                <td>{{player.age}}</td>
-                <td> <img  width="60px" height="40px" src="{{player.nationality.flag}}"></td>
-                 
-                
-                
-               
-                <td *ngIf="HardcodedAuthenticationService.isUserAdmin()"><button class="btn btn-primary" > Update</button> </td>
-                <td *ngIf="HardcodedAuthenticationService.isUserAdmin()"><button class="btn btn-danger" (click)="delete(player.id)"> Delete</button> </td>
-               
-            </tr>
-        </tbody>
+            <tbody *ngIf="key=='fullName'">
+                <tr *ngFor="let player of Players | filter:fltr | orderBy:key "> 
+                    <td><img width="100px" heigth="200px" src="{{player.pic}}"></td>
+                    <td>{{player.fullName}}</td>
+                    <td>{{player.position}}</td>
+                    <td>{{player.numberGoals}}</td>
+                    <td>{{player.number}}</td>
+                    <td>{{player.age}}</td>
+                    <td> <img  width="60px" height="40px" src="{{player.nationality.flag}}"></td>
+                     
+                    
+                    
+                   
+                    <td *ngIf="HardcodedAuthenticationService.isUserAdmin()"><button class="btn btn-primary" > Update</button> </td>
+                    <td *ngIf="HardcodedAuthenticationService.isUserAdmin()"><button class="btn btn-danger" (click)="delete(player.id)"> Delete</button> </td>
+                   
+                </tr>
+            </tbody>
+            <tbody *ngIf="key!='fullName'">  
+                <tr *ngFor="let player of Players | filter:fltr |orderBy:key:true "> 
+                    <td><img width="100px" heigth="200px" src="{{player.pic}}"></td>
+                    <td>{{player.fullName}}</td>
+                    <td>{{player.position}}</td>
+                    <td>{{player.numberGoals}}</td>
+                    <td>{{player.number}}</td>
+                    <td>{{player.age}}</td>
+                    <td> <img  width="60px" height="40px" src="{{player.nationality.flag}}"></td>
+                     
+                    
+                    
+                   
+                    <td *ngIf="HardcodedAuthenticationService.isUserAdmin()"><button class="btn btn-primary" > Update</button> </td>
+                    <td *ngIf="HardcodedAuthenticationService.isUserAdmin()"><button class="btn btn-danger" (click)="delete(player.id)"> Delete</button> </td>
+                   
+                </tr>
+            </tbody>
+        
     </table>
     </div>

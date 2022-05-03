@@ -28,8 +28,12 @@ export class MatchFormComponent implements OnInit {
     this.match.date = val.date;
     this.match.team1.id=val.team1;
     this.match.team2.id=val.team2;
-    this.matchService.handleAddMatch(this.match);
-    this.router.navigate(['/matches']); 
+    if(val.team1 == val.team2)alert("team1 and team2 can't be the same");
+    else{
+      this.matchService.handleAddMatch(this.match);
+      this.router.navigate(['/matches']); 
+    }
+    
  
   }
   getTeam(){

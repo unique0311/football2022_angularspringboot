@@ -1,12 +1,13 @@
 <small *ngIf ='check'> Wrong credintials </small>
 <div class="container">
-    <div class="alert alert-warning" *ngIf="!LoggedIn">You need to login</div> 
+    
     <form #frm="ngForm" (ngSubmit)="handleLogin(frm.value)">
-        Username <input type="text" name = "username" [(ngModel)] = "username" > 
-        Password <input type="password" name = "password" [(ngModel)] = "password" >
-        <button  class="btn btn-success"> Login </button>
+        Username <input class="form-control" type="text" name = "username" [(ngModel)] = "username" > 
+        Password <input  class="form-control" type="password" name = "password" [(ngModel)] = "password" >
+       <br> <button  class="btn btn-primary"> Login </button>
         <br>
-        <a routerLink="/signup" > Signup </a>
+        You don't have an account? <a routerLink="/signup" >  Signup </a>
+       
     </form>
 </div>
 

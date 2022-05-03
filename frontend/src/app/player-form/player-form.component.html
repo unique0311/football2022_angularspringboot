@@ -8,7 +8,7 @@
         Yellow cards  <input class="form-control" type="number"  name="numberYellowCards" ngModel/> 
         Red cards<input class="form-control" type="number"  name="getNumberRedCards" ngModel/> 
         Nationality
-        <select name="nationality" ngModel (change)="onChange($event.target)" >    
+        <select class="form-select" aria-label="Default select example" name="nationality" ngModel (change)="onChange($event.target)" >    
             Team1<option *ngFor="let team of Teams" value={{team.id}} > {{team.name}} </option>
         </select> <br>
         Picture <input type='file' (change)="readUrl($event)">
