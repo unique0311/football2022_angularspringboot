@@ -21,9 +21,12 @@ export class MatchesComponent implements OnInit {
       response => this.getResp(response)
     )
   }
-  
+ today = new Date();
+ date = this.today.getFullYear()+'-'+(this.today.getMonth()+1)+'-'+this.today.getDate();
+ 
   getResp(res:any){
     this.matches=res;
     console.log(this.matches)
+    console.log("date lyoum ==>",this.date)
   }
 }

@@ -11,5 +11,5 @@ export class MenuComponent implements OnInit {
   constructor(public HardcodedAuthenticationService:HardcodedAuthenticationService) { }
   ngOnInit(): void {
   }
- 
+  user = sessionStorage.getItem('authenticatedUser');
 }

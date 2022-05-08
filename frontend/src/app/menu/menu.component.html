@@ -11,6 +11,7 @@
             <li><a routerLink="/matches"  *ngIf="HardcodedAuthenticationService.isUserLoggedIn()" class="nav-link">   Matches </a> </li>
         </ul>
         <ul class="navbar-nav navbar-collapse justify-content-end ">
+            <li *ngIf="HardcodedAuthenticationService.isUserLoggedIn()"><img src="https://cdn-icons-png.flaticon.com/512/219/219986.png" height="40px" width="40px" > &nbsp;<font color="white">{{user}}</font></li> 
             <li><a routerLink="/login" *ngIf="!HardcodedAuthenticationService.isUserLoggedIn()" class="nav-link "> Login </a></li>
             <li><a routerLink="/logout"  *ngIf="HardcodedAuthenticationService.isUserLoggedIn()"class="nav-link" > Logout </a> </li>
         </ul>

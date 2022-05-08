@@ -14,8 +14,6 @@ export class WelcomeComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.route.snapshot.params['name'])
   }
-  user='Dhia';
-  name =this.route.snapshot.params['name'];
-  pass='123';
+ 
 
 }
