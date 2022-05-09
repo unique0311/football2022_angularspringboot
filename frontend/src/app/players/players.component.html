@@ -1,3 +1,56 @@
+<div class="modal fade" id="deletemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Delete player</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" layout-align="center center">
+          Do you really want to delete ? <br>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-success" (click)="delete(currentplayerId)" >Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="updatemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Player</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form #frm="ngForm" (ngSubmit)="HandleUpdatePlayer(frm.value)">
+        <div class="modal-body">
+          <div class="player">
+            <img width="100%" height="350px" src="{{currentPlayer.pic}}"><br>
+          </div>
+          
+          Enter the new name  <br><input type="text" class="form-control" id="fullName" value="{{currentPlayer.fullName}}" name="fullName" ngModel={{currentPlayer.fullName}}> <br>
+          Enter the new Number  <br><input type="text" class="form-control" id="number" value="{{currentPlayer.number}}" name="number" ngModel={{currentPlayer.number}}> <br> 
+          Enter the new number of goals  <br><input type="text" class="form-control" id="numberGoals" value="{{currentPlayer.numberGoals}}" name="numberGoals" ngModel={{currentPlayer.numberGoals}}><br>
+           Enter the new Age  <br><input type="text" class="form-control" id="age" value="{{currentPlayer.age}}" name="age" ngModel={{currentPlayer.age}}><br>
+         
+         
+      
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-success"  >Yes</button>
+        </div>
+      </form>
+      </div>
+      
+    </div>
+  </div>
+
 <div class="container" > 
     <br>
     <div> <input  class="form-control mr-sm-2" type="text" placeholder="Search" [(ngModel)]="fltr" ></div>
@@ -39,8 +92,16 @@
                     
                     
                    
-                    <td *ngIf="HardcodedAuthenticationService.isUserAdmin()"><button class="btn btn-primary" > Update</button> </td>
-                    <td *ngIf="HardcodedAuthenticationService.isUserAdmin()"><button class="btn btn-danger" (click)="delete(player.id)"> Delete</button> </td>
+                    <td *ngIf="HardcodedAuthenticationService.isUserAdmin()">
+                      <button (click)="setId(player)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#updatemodal">
+                          Update
+                      </button>
+                  </td>   
+                    <td *ngIf="HardcodedAuthenticationService.isUserAdmin()">
+                        <button (click)="setId(player)" type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletemodal">
+                            Delete
+                        </button>
+                    </td>
                    
                 </tr>
             </tbody>
@@ -57,8 +118,17 @@
                     
                     
                    
-                    <td *ngIf="HardcodedAuthenticationService.isUserAdmin()"><button class="btn btn-primary" > Update</button> </td>
-                    <td *ngIf="HardcodedAuthenticationService.isUserAdmin()"><button class="btn btn-danger" (click)="delete(player.id)"> Delete</button> </td>
+                    <td *ngIf="HardcodedAuthenticationService.isUserAdmin()">
+                      <button (click)="setId(player)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#updatemodal">
+                          Update
+                      </button>
+                  </td>   
+                    <td *ngIf="HardcodedAuthenticationService.isUserAdmin()">
+                        <button (click)="setId(player)" type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletemodal">
+                            Delete
+                        </button>
+                    </td>
+                   
                    
                 </tr>
             </tbody>

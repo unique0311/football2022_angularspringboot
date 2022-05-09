@@ -19,9 +19,11 @@ import { MatchFormComponent } from './match-form/match-form.component';
 import { RegisterComponent } from './register/register.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { OrderModule } from 'ngx-order-pipe';
+import {MatchModalComponent} from './match-modal/match-modal.component'
 
 @NgModule({
   declarations: [
+    MatchModalComponent,
     AppComponent,
     LoginComponent,
     WelcomeComponent,
@@ -43,7 +45,8 @@ import { OrderModule } from 'ngx-order-pipe';
     AngularEmojisModule,
     HttpClientModule,
     Ng2SearchPipeModule,
-    OrderModule
+    OrderModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

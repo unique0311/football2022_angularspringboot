@@ -11,11 +11,13 @@ import { HardcodedAuthenticationService } from '../service/hardcoded-authenticat
 })
 export class PlayersComponent implements OnInit {
   Players:any;
+  currentplayerId:any;
   key="";
   constructor(private PlayerService: PlayerService, private router:Router,public HardcodedAuthenticationService:HardcodedAuthenticationService) { }
   fltr:any;
   ngOnInit(): void {
-    this.getPlayer()
+    this.getPlayer();
+    this.currentPlayer = {};
   }
   getPlayer(){
     this.PlayerService.playerService().subscribe(
@@ -26,13 +28,26 @@ export class PlayersComponent implements OnInit {
     this.Players=res;
     console.log(this.Players)
   }
-  delete(id:any){
-    this.PlayerService.deletePlayer(id).subscribe(() => console.log("player deleted"))
-    window.location.reload();
+  delete(player:any){
+    let id = player;
+    console.log("playuer==>",player)
+      this.PlayerService.deletePlayer(id).subscribe(() => console.log("player deleted"))
+      window.location.reload();
   }
-  
+  currentPlayer:any;
   handleSearch(val:any){
     this.fltr = val.value;
    
   }
+  HandleUpdatePlayer(val:any){
+    console.log("value = ",val)
+    this.PlayerService.handleUpdatePlayer(val,this.currentplayerId);
+    window.location.reload();
+}
+    setId(player:any){
+      this.currentPlayer = player;
+      this.currentplayerId = player.id;
+      console.log("hah =>",this.currentPlayer)
+    }
+  
 }

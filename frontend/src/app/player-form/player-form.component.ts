@@ -14,18 +14,20 @@ export class PlayerFormComponent implements OnInit {
   nationality : any;
   url:any;
   Teams:any;
+
+  
   constructor(private playerService: PlayerService,private router:Router,private TeamsService:TeamServiceService) { }
 
   ngOnInit(): void {
     this.getTeam();
+   
   }
+  
   HandleAddPlayer(val:any){
     val.nationality = this.nt;
     val.pic = this.url;
-
-    console.log("object ==>",val)
     this.playerService.handleAddPlayer(val);
-    console.log("lenaaa=>",val,"  nation ==>",this.nationality)
+    console.log("Nothing")
     this.router.navigate(['/players']); 
     
   }
@@ -54,4 +56,7 @@ export class PlayerFormComponent implements OnInit {
     console.log(deviceValue.value);
     this.nt.id = deviceValue.value;
   }
+
+  
+ 
 }

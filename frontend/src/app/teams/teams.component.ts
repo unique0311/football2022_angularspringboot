@@ -12,6 +12,7 @@ export class TeamsComponent implements OnInit {
 Teams:any;
 team:any;
 fltr=""
+currentTeam:any;
 key="name"
   constructor(private TeamsService: TeamServiceService,public HardcodedAuthenticationService:HardcodedAuthenticationService) { }
   
@@ -39,5 +40,10 @@ key="name"
   delete(id:any){
     this.TeamsService.deleteTeam(id).subscribe(() => console.log("Team deleted"))
     window.location.reload();
+  }
+
+  setId(player:any){
+    this.currentTeam = player;
+
   }
 }

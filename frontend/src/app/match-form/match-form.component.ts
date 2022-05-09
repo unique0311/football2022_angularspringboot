@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 })
 export class MatchFormComponent implements OnInit {
   match = {
-      "date": "07/26/2022",
+      "date": "",
+      "time":"",
       "team2": {
           "id": 9
       },
@@ -25,6 +26,7 @@ export class MatchFormComponent implements OnInit {
     this.getTeam();
   }
   HandleAddMatch(val:any){
+    this.match.time = val.time;
     this.match.date = val.date;
     this.match.team1.id=val.team1;
     this.match.team2.id=val.team2;
