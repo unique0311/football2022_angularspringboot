@@ -15,7 +15,17 @@ export class MatchesComponent implements OnInit {
    closeResult = '';
   ngOnInit(): void {
     this.getMatches()
-    this.currentMatch = '0'
+    this.currentMatch = {
+      date:"",
+      team1:{
+        name:'',
+        flag:''
+      },
+      team2:{
+        name:'',
+        flag:''
+      }
+    }
   }
   getMatches(){
     this.matchService.matchService().subscribe(
@@ -34,8 +44,7 @@ export class MatchesComponent implements OnInit {
   setId(match:any){
     this.currentMatch = match;
     this.currentMatchId = match.id
-
-   
+    console.log("Current match => ",this.currentMatch)
   }
   currentMatchId:any;
   currentMatch:any;

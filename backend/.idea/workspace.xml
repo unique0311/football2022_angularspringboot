@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd82149d-0b02-4187-9a3e-61c2d422e22f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/backend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Controllers/HelloWorldController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Controllers/PlayerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Controllers/TeamController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Controllers/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Models/Player.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Models/Team.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Models/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Repository/PlayerRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Repository/TeamRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/RestfulWebServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/security/AppSecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/security/AppUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/service/AppUserDetailsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-service/src/test/java/worldcup22/restfulwebservice/RestfulWebServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +73,8 @@
       <workItem from="1649610994421" duration="20000" />
       <workItem from="1652061260024" duration="20000" />
       <workItem from="1652061360210" duration="61000" />
-      <workItem from="1652061432362" duration="513000" />
+      <workItem from="1652061432362" duration="658000" />
+      <workItem from="1652108026904" duration="113000" />
     </task>
     <servers />
   </component>

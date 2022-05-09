@@ -29,8 +29,16 @@
         </div>
         <form #frm="ngForm" (ngSubmit)="HandleUpdateMatch(frm.value)">
         <div class="modal-body">
-             Choose the new date<br><input class="form-control"  type="date" id="date" value ="{{ currentMatch.date | date: 'yyyy-MM-dd'}}" name="date" ngModel={{currentMatch.date}}><br>
-             Choose new hour <br><input type="text" class="form-control" id="time" value ="{{ currentMatch.time}}" name="time" ngModel={{currentMatch.time}}>
+          <table>
+          <tr >
+            <td><img width="80px" height="50px" src="{{currentMatch.team1.flag }}"></td>
+            <td> VS </td>
+            <td><img width="80px" height="50px" src="{{currentMatch.team2.flag }}"></td>
+          </tr>
+        </table>
+          <br>
+             Choose a new date<br><input class="form-control"  type="date" id="date" value ="{{ currentMatch.date | date: 'yyyy-MM-dd'}}" name="date" ngModel={{currentMatch.date}}><br>
+             Choose a new time <br><input type="text" class="form-control" id="time" value ="{{ currentMatch.time}}" name="time" ngModel={{currentMatch.time}}>
       
         </div>
         <div class="modal-footer">
