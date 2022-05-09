@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fd82149d-0b02-4187-9a3e-61c2d422e22f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/backend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Controllers/HelloWorldController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Controllers/PlayerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Controllers/TeamController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Controllers/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Models/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Models/Team.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Models/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Repository/PlayerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Repository/TeamRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/Repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/RestfulWebServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/security/AppSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/security/AppUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/java/worldcup22/restfulwebservice/service/AppUserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/restful-web-service/src/test/java/worldcup22/restfulwebservice/RestfulWebServiceApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="#JAVA_HOME" />
+  </component>
+  <component name="ProjectId" id="27X359uGkdQ8KDG3llnb4PUlJpb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/worldcup" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="spring-boot:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/worldcup" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd82149d-0b02-4187-9a3e-61c2d422e22f" name="Changes" comment="" />
+      <created>1649452418559</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649452418559</updated>
+      <workItem from="1649452419725" duration="43000" />
+      <workItem from="1649466541479" duration="120000" />
+      <workItem from="1649570158887" duration="1556000" />
+      <workItem from="1649571756694" duration="1971000" />
+      <workItem from="1649610994421" duration="20000" />
+      <workItem from="1652061260024" duration="20000" />
+      <workItem from="1652061360210" duration="61000" />
+      <workItem from="1652061432362" duration="513000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
