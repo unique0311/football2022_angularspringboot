@@ -13,11 +13,17 @@ Teams:any;
 team:any;
 fltr=""
 currentTeam:any;
+currentTeamId:any
 key="name"
   constructor(private TeamsService: TeamServiceService,public HardcodedAuthenticationService:HardcodedAuthenticationService) { }
   
   ngOnInit(): void {
     this.getTeam()
+    this.currentTeam={
+      name:'',
+      numbrCups:0,
+      content:''
+    }
   }
   getTeam(){
    this.TeamsService.teamService().subscribe(
@@ -44,6 +50,13 @@ key="name"
 
   setId(player:any){
     this.currentTeam = player;
+    this.currentTeamId = player.id;
 
   }
+  
+  HandleUpdateTeam(val:any){
+    console.log("value = ",val)
+    this.TeamsService.handleUpdateTeam(val,this.currentTeamId);
+    window.location.reload();
+}
 }

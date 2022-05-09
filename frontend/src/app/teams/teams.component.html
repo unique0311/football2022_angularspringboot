@@ -1,4 +1,4 @@
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="deletemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -17,7 +17,36 @@
         </div>
       </div>
     </div>
+</div>
+<div class="modal fade" id="updatemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update team</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form #frm="ngForm" (ngSubmit)="HandleUpdateTeam(frm.value)">
+      <div class="modal-body">
+        <div class="team">
+          <img width="120px" height="80px" src={{currentTeam.flag}}>
+        </div>
+         
+          <br>
+             Choose a new name<br><input class="form-control"  type="text" id="name" value ="{{ currentTeam.name}}" name="name" ngModel={{currentTeam.name}}><br>
+             Choose a new content <br><input type="text" class="form-control" id="content" value ="{{ currentTeam.content}}" name="content" ngModel={{currentTeam.content}}><br>
+             Choose a new number of cups <br><input type="number" class="form-control" id="numbrCups" value ="{{ currentTeam.numbrCups}}" name="numbrCups" ngModel={{currentTeam.numbrCups}}>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        <button type="submit" class="btn btn-success"  >Yes</button>
+      </div>
+    </form>
+    </div>
+    
   </div>
+</div>
 <div class="container" > 
     <br>
     <div> <input  class="form-control mr-sm-2" type="text" placeholder="Search" [(ngModel)]="fltr" ></div>
@@ -45,9 +74,13 @@
                 <td>{{team.final}}</td>
                 <td>{{team.numbrCups}}</td>
 
-                <td *ngIf="HardcodedAuthenticationService.isUserAdmin()"><button class="btn btn-primary" > Update</button> </td>
                 <td *ngIf="HardcodedAuthenticationService.isUserAdmin()">
-                    <button (click)="setId(team)" type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                  <button (click)="setId(team)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#updatemodal">
+                      Update
+                  </button>
+                </td>   
+                <td *ngIf="HardcodedAuthenticationService.isUserAdmin()">
+                    <button (click)="setId(team)" type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletemodal">
                         Delete
                     </button>
                 </td>

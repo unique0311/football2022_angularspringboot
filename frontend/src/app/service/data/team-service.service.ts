@@ -73,4 +73,21 @@ export class TeamServiceService {
      return this.http.delete(baseUrl,{headers: headers_object}) 
      
   }
+
+  handleUpdateTeam(data:any,id:any){
+    let token =  sessionStorage.getItem('Token')
+    let headers_object = new HttpHeaders().set("Authorization", "Bearer " +token); 
+    let url = "http://localhost:8090/team/"+id
+    try {
+      return this.http.put(url,data,{headers: headers_object}).subscribe(
+        response=>console.log("Match data ===>",response)
+      );
+     
+      
+   }
+   catch (e) {
+      return null;
+   }
+  
+  }
 }

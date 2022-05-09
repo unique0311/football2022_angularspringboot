@@ -12,7 +12,7 @@ export class RouteGuardService implements CanActivate {
     if(this.authService.isUserLoggedIn())
       return true;
     else {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/welcome']);
     }
    return false;
   }
