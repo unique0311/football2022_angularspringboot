@@ -1,20 +1,20 @@
 
 
 
-<form #frm="ngForm" (ngSubmit)="HandleAddPlayer(frm.value)">
+<form #frm="ngForm" (ngSubmit)="HandleAddPlayer(frm.value)" ngNativeValidate>
     <div class="form-group container">
-        Full name<input class="form-control" type="text" name="fullName" ngModel/> 
-        Position <input  class="form-control" type="text"  name="position" ngModel/> 
-        Number <input  class="form-control"type="number" name="number" ngModel/> 
-        Age <input class="form-control" type="number"  name="age" ngModel />
-        Number of goals <input class="form-control" type="number"  name="numberGoals" ngModel/> 
-        Yellow cards  <input class="form-control" type="number"  name="numberYellowCards" ngModel/> 
-        Red cards<input class="form-control" type="number"  name="getNumberRedCards" ngModel/> 
+        Full name<input  class="form-control" type="text" name="fullName" required ngModel/> 
+        Position <input  class="form-control" type="text"  name="position" required ngModel/> 
+        Number <input  class="form-control"type="number" name="number" required ngModel/> 
+        Age <input class="form-control" type="number"  name="age" required ngModel />
+        Number of goals <input class="form-control" type="number" required name="numberGoals" ngModel/> 
+        Yellow cards  <input class="form-control" type="number" required name="numberYellowCards" ngModel/> 
+        Red cards<input class="form-control" type="number" required name="getNumberRedCards" ngModel/> 
         Nationality
-        <select class="form-select" aria-label="Default select example" name="nationality" ngModel (change)="onChange($event.target)" >    
+        <select class="form-select" aria-label="Default select example" name="nationality" required ngModel (change)="onChange($event.target)" >    
             Team1<option *ngFor="let team of Teams" value={{team.id}} > {{team.name}} </option>
         </select> <br>
-        Picture <input type='file' (change)="readUrl($event)">
+        Picture <input type='file' (change)="readUrl($event)" required>
         <img [src]="url" height="300px" width="250px" *ngIf="url"> <br>
         <input type="submit"  class="btn btn-primary">
     </div>

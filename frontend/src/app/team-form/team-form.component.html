@@ -1,14 +1,26 @@
-<form #frm="ngForm" (ngSubmit)="HandleAddTeam(frm.value)">
+
+<form #frm="ngForm" (ngSubmit)="HandleAddTeam(frm.value)" ngNativeValidate>
     <div class="form-group container">
-        Team name <input class="form-control" type="text" name="name" ngModel/> 
-        Number of cupps <input  class="form-control" type="number"  name="numbrCups" ngModel/> 
-        Content <input  class="form-control"  name="content" ngModel/> 
+        Team name <input pattern="[A-Za-z]+" class="form-control" type="text" name="name" ngModel required/> 
+        
+        Number of cupps <input required min="0" class="form-control" type="number"  name="numbrCups" ngModel/> 
+     Content 
+        <select name="content" class="form-select" ngModel required>
+            <option value="Asia" Selected>Asia</option>
+            <option value="Africa">Africa</option>
+            <option value="North America">North America</option>
+            <option value="South America">South America</option>
+            <option value="Antarctica">Antarctica</option>
+            <option value="Europe">Europe</option>
+            <option value="Australia">Australia</option>
+        </select><br>
         Semi final <input  type="checkbox"  class="form-check-label" name="semiFinal" ngModel /><br>
         Quart Final <input type="checkbox" class="form-check-label" name="quartFinal" ngModel/> <br>
         Final  <input type="checkbox" class="form-check-label"   name="isFinal" ngModel/> <br>
         Flag 
-        <input type='file' (change)="readUrl($event)">
+        <input type='file' (change)="readUrl($event)" required>
         <img [src]="url" height="100px" width="200px" *ngIf="url"> <br>
         <input type="submit"  class="btn btn-primary">
+       
     </div>
 </form>

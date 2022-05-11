@@ -16,6 +16,7 @@ export class MatchesComponent implements OnInit {
   ngOnInit(): void {
     this.getMatches()
     this.currentMatch = {
+      tame:"",
       date:"",
       team1:{
         name:'',

@@ -27,16 +27,16 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form #frm="ngForm" (ngSubmit)="HandleUpdateTeam(frm.value)">
+      <form #frm="ngForm" (ngSubmit)="HandleUpdateTeam(frm.value)" ngNativeValidate>
       <div class="modal-body">
         <div class="team">
           <img width="120px" height="80px" src={{currentTeam.flag}}>
         </div>
          
           <br>
-             Choose a new name<br><input class="form-control"  type="text" id="name" value ="{{ currentTeam.name}}" name="name" ngModel={{currentTeam.name}}><br>
-             Choose a new content <br><input type="text" class="form-control" id="content" value ="{{ currentTeam.content}}" name="content" ngModel={{currentTeam.content}}><br>
-             Choose a new number of cups <br><input type="number" class="form-control" id="numbrCups" value ="{{ currentTeam.numbrCups}}" name="numbrCups" ngModel={{currentTeam.numbrCups}}>
+             Choose a new name<br><input  pattern="[A-Za-z]+" required class="form-control"  type="text" id="name" value ="{{ currentTeam.name}}" name="name" ngModel={{currentTeam.name}}><br>
+             Choose a new content <br><input  required type="text" class="form-control" id="content" value ="{{ currentTeam.content}}" name="content" ngModel={{currentTeam.content}}><br>
+             Choose a new number of cups <br><input  required type="number" min="0" class="form-control" id="numbrCups" value ="{{ currentTeam.numbrCups}}" name="numbrCups" ngModel={{currentTeam.numbrCups}}>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>

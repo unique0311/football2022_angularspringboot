@@ -1,19 +1,6 @@
-<div class="container" > 
-<table class="table">
-    <thead> 
-        <tr> 
-          
-            <th>Description</th>
-            <th>Done</th>
-            <th>Deadline</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let todo of todos"> 
-            <td>{{todo.description}}</td>
-            <td>{{todo.done}}</td>
-            <td>{{todo.deadLine | date}}</td>
-        </tr>
-    </tbody>
-</table>
-</div>
+<mat-form-field appearance="legacy">
+    <mat-label>Legacy form field</mat-label>
+    <input matInput placeholder="Placeholder">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>

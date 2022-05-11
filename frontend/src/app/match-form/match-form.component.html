@@ -1,17 +1,17 @@
-<form #frm="ngForm" (ngSubmit)="HandleAddMatch(frm.value)">
+<form #frm="ngForm" (ngSubmit)="HandleAddMatch(frm.value)" ngNativeValidate>
     <div class="form-group container">
       
         Team 1
-        <select class="form-select" aria-label="Default select example" name="team1" ngModel (change)="test()">    
+        <select required class="form-select" aria-label="Default select example" name="team1" ngModel (change)="test()">    
             Team1<option *ngFor="let team of Teams" value={{team.id}} ><img  width="50px" height="50px" src={{team.flag}}>  {{team.name}} </option>
         </select> <br>
         Team2
-        <select class="form-select" aria-label="Default select example" name="team2" ngModel (change)="test()" >    
+        <select required class="form-select" aria-label="Default select example" name="team2" ngModel (change)="test()" >    
             Team2<option *ngFor="let team of Teams" value={{team.id}} > <div *ngIf="team2 == team1"><img  width="50px" height="50px" src={{team.flag}}>{{team.name}}</div> </option>
         </select> <br>
-        Date<input class="form-control" type="date" name="date" ngModel/> <br>
+        Date<input required class="form-control" type="date" name="date" ngModel/> <br>
 
-        Time<input class="form-control" type="text" name="time" ngModel/> <br>
+        Time<input required class="form-control" type="time" name="time" ngModel/> <br>
         <input type="submit"  class="btn btn-primary">
     </div>
 </form>

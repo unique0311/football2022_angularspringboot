@@ -20,6 +20,7 @@ import { RegisterComponent } from './register/register.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { OrderModule } from 'ngx-order-pipe';
 import {MatchModalComponent} from './match-modal/match-modal.component'
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import {MatchModalComponent} from './match-modal/match-modal.component'
     MatchesComponent,
     MatchFormComponent,
     RegisterComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -46,7 +48,7 @@ import {MatchModalComponent} from './match-modal/match-modal.component'
     HttpClientModule,
     Ng2SearchPipeModule,
     OrderModule,
-    
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

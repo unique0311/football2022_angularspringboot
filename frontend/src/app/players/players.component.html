@@ -27,16 +27,16 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form #frm="ngForm" (ngSubmit)="HandleUpdatePlayer(frm.value)">
+        <form #frm="ngForm" (ngSubmit)="HandleUpdatePlayer(frm.value)" ngNativeValidate>
         <div class="modal-body">
           <div class="player">
             <img width="100%" height="350px" src="{{currentPlayer.pic}}"><br>
           </div>
           
-          Enter the new name  <br><input type="text" class="form-control" id="fullName" value="{{currentPlayer.fullName}}" name="fullName" ngModel={{currentPlayer.fullName}}> <br>
-          Enter the new Number  <br><input type="text" class="form-control" id="number" value="{{currentPlayer.number}}" name="number" ngModel={{currentPlayer.number}}> <br> 
-          Enter the new number of goals  <br><input type="text" class="form-control" id="numberGoals" value="{{currentPlayer.numberGoals}}" name="numberGoals" ngModel={{currentPlayer.numberGoals}}><br>
-           Enter the new Age  <br><input type="text" class="form-control" id="age" value="{{currentPlayer.age}}" name="age" ngModel={{currentPlayer.age}}><br>
+          Enter the new name  <br><input type="text" class="form-control" id="fullName" value="{{currentPlayer.fullName}}" name="fullName" ngModel={{currentPlayer.fullName}} required> <br>
+          Enter the new Number  <br><input type="number" class="form-control" id="number" value="{{currentPlayer.number}}" name="number" ngModel={{currentPlayer.number}} required> <br> 
+          Enter the new number of goals  <br><input type="number" class="form-control" id="numberGoals" value="{{currentPlayer.numberGoals}}" name="numberGoals" ngModel={{currentPlayer.numberGoals}} required><br>
+           Enter the new Age  <br><input type="number" class="form-control" id="age" value="{{currentPlayer.age}}" name="age" ngModel={{currentPlayer.age}} required><br>
          
          
       
@@ -96,7 +96,7 @@
                       <button (click)="setId(player)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#updatemodal">
                           Update
                       </button>
-                  </td>   
+                    </td>   
                     <td *ngIf="HardcodedAuthenticationService.isUserAdmin()">
                         <button (click)="setId(player)" type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletemodal">
                             Delete

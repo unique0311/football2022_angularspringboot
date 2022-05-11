@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TeamServiceService } from '../service/data/team-service.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-team-form',
   templateUrl: './team-form.component.html',
@@ -13,6 +14,8 @@ export class TeamFormComponent implements OnInit {
   url:any;
   ngOnInit(): void {
   }
+  
+
   readUrl(event:any) {
     if (event.target.files && event.target.files[0]) {
       var reader = new FileReader();
